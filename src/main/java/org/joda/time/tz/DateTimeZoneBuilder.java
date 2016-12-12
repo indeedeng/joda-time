@@ -1418,7 +1418,7 @@ public class DateTimeZoneBuilder {
             String[][] zoneStrings = new DateFormatSymbols(Locale.ENGLISH).getZoneStrings();
             for (int j = 0; j < zoneStrings.length; j++) {
                 String[] set = zoneStrings[j];
-                if (set != null && set.length == 5 && id.equals(set[0])) {
+                if (set != null && set.length >= 5 && id.equals(set[0])) {
                     zoneNameData = set;
                 }
             }

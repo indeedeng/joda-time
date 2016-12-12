@@ -65,7 +65,7 @@ public class DefaultNameProvider implements NameProvider {
             String[][] zoneStrings = DateTimeUtils.getDateFormatSymbols(locale).getZoneStrings();
             for (int i=0; i<zoneStrings.length; i++) {
                 String[] set = zoneStrings[i];
-                if (set != null && set.length == 5 && id.equals(set[0])) {
+                if (set != null && set.length >= 5 && id.equals(set[0])) {
                     byNameKeyCache.put(set[2], new String[] {set[2], set[1]});
                     // need to handle case where summer and winter have the same
                     // abbreviation, such as EST in Australia [1716305]
